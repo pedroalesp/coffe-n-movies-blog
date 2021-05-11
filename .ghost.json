@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://coffeenmovies.herokuapp.com",
+    "contentApiKey": "3b3f1c8a773375b0eb134af718"
+  },
+  "production": {
+    "apiUrl": "https://coffeenmovies.herokuapp.com",
+    "contentApiKey": "3b3f1c8a773375b0eb134af718"
+  }
+}
