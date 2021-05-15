@@ -23,10 +23,10 @@ what's here to work the way you'd like it to.
 
     /* Colours */
     --color-primary: #3eb0ef;
-    --color-base: #15171A;
+    --color-base: #001219;
     --color-secondary: #5B7A81;
     --color-border: #c7d5d8;
-    --color-bg: #f5f5f5;
+    --color-bg: #be1010;
 
     /* Fonts */
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -688,7 +688,7 @@ h6 {
 }
 
 .site-logo {
-    height: 25px;
+    height: 50px;
 }
 
 .site-mast {
@@ -732,12 +732,12 @@ h6 {
 .site-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 15px 0 0 0;
 }
 
 .site-nav-left {
-    margin: 0 20px 0 -10px;
+    margin: 0 20px 0 0;
 }
 
 .site-nav-button {

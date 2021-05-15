@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gatsby Starter Ghost
 
 A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
@@ -108,3 +109,7 @@ Gatsby `develop` uses the `development` config in `.ghost.json` - while Gatsby `
 # Copyright & License
 
 Copyright (c) 2013-2021 Ghost Foundation - Released under the [MIT license](LICENSE).
+=======
+# coffe-n-movies-blog
+This is a blog made with Ghost and Gatsby in wich I write reviews and recomendations
+>>>>>>> e89e4c01415ed336f292697dcd51f47222c63bca
