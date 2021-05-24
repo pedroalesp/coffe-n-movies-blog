@@ -53,11 +53,12 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: path.join(__dirname, `src`, `images`),
+                path:  `${__dirname}/src/images`,
                 name: `images`,
             },
         },
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-image`,
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-source-ghost`,
