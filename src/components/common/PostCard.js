@@ -4,12 +4,14 @@ import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, portrait }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
     return (
-        <Link to={url} className="post-card">
+        <article className={`post-card ${portrait  ? 'post-card-portrait': ''} `}>
+          <Link to={url} className="post-card">
+        
             <header className="post-card-header">
                 {post.feature_image &&
                     <div className="post-card-image" style={{
@@ -35,6 +37,7 @@ const PostCard = ({ post }) => {
                 </div>
             </footer>
         </Link>
+        </article>
     )
 }
 

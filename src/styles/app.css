@@ -782,6 +782,9 @@ h6 {
         grid-template-columns: 1fr;
     }
 }
+.post-card-portrait {
+    border: 2px solid red;
+}
 
 .post-card {
     color: inherit;

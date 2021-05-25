@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://coffe-n-movies.ghost.io",
-    "contentApiKey": "26b2a74c89bea0e08fe24e5500"
+    "apiUrl": "https://coffeenmoviesblog.herokuapp.com",
+    "contentApiKey": "2839c5eb3b5b899800cd5ee3af"
   },
   "production": {
-    "apiUrl": "https://coffe-n-movies.ghost.io",
-    "contentApiKey": "26b2a74c89bea0e08fe24e5500"
+    "apiUrl": "https://coffeenmoviesblog.herokuapp.com",
+    "contentApiKey": "2839c5eb3b5b899800cd5ee3af"
   }
 }
