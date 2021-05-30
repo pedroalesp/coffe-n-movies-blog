@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Header } from '.'
 import { Helmet } from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { Navigation } from '.'
-import { ToggleMenu } from '.'
 import '../../styles/app.css'
 //import config from '../../utils/siteConfig'
 
@@ -23,22 +21,7 @@ const DefaultLayout = ({ data, children, bodyClass}) => {
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
-                    <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
-                        <div className="container">
-                            <div className="site-mast">
-                                <div className="site-mast-left">
-                                    <Link to="/">
-                                        {site.logo ?
-                                            <img className="site-logo" src={site.logo} alt={site.title} />
-                                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
-                                    </Link>
-                                </div>
-                                    <ToggleMenu site={site} />
-                            </div>
-                        </div>
-                    </header>
-
+                    <Header site={site}/>
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
