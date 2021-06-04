@@ -1,39 +1,39 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from 'gatsby'
+//import {Link} from 'gatsby'
 import { Navigation } from '.'
+import menu from '../../images/menu-icon.png'
+import {StyledNav} from '../../styles/components'
 import useReactSimpleMatchMedia from 'react-simple-matchmedia'
 import '../../styles/app.css'
 
 const Header = ({site}) => {
-    const [match, setMatch] = useState(false)
+    const [match, setMatch] = useState(true)
+    const [open, setOpen] = useState(false)
     const matched = useReactSimpleMatchMedia('(max-width: 620px)')
 
     useEffect( () => {
         setMatch(matched)
-    }, [])
+    }, [matched])
 
     return (
         <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
-        <div className="container">
+            <div className="container">
+                {/* <StyledNav toggle={open}>
+                    <Navigation data={site.navigation} navClass="site-nav-item" />
+                </StyledNav> */}
 
-            {
-                match ? (
-                    <p>epa</p>
-                ) : (
-                    <div className="site-mast">
-                    <div className="site-mast-left">
-                        <Link to="/">
-                                <img className="site-logo" src={site.logo} alt={site.title} />
-                        </Link>
-                    </div>
-                    <div className="site-mast-right">
-                        <Navigation data={site.navigation}/>
-                    </div>
-                </div>
-                )
-            }
+                  {match 
+                  ? ( <small  onClick={() => setOpen(!open)}>
+                          <img src={menu} className='site-menu' alt='menu' />
+                      </small> )
+                  : ( <nav className="site-nav">
+                           <div className="site-nav-left">
+                               <Navigation data={site.navigation} navClass="site-nav-item" />
+                          </div>
+                      </nav>)}
 
-        </div>
+
+            </div>
     </header>
     )
 }
