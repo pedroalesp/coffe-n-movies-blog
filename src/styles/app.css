@@ -523,6 +523,9 @@ h6 {
     justify-content: space-between;
     min-height: 100vh;
 }
+.viewport-top {
+    display: flex;
+}
 
 .container {
     max-width: 1120px;
@@ -763,7 +766,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 4vw 0;
+    padding: 7em 0 2em 0;
 }
 
 /* Index

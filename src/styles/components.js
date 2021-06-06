@@ -1,14 +1,20 @@
 import styled from 'styled-components'
 
-export const StyledNav = styled.nav`
-transform: ${({toggle}) => toggle ? 'translateX(0);' : 'translateX(-100%);'};
-width: 82%;
-position: absolute;
+export const StyledNav = styled.div`
+border: 2px solid ${({menuToggle}) => menuToggle ? 'red;' : 'blue;'}
+width: 100vw;
+height: 100%;
+position: fixed;
 background-color: #001219;
 z-index: 3;
-height: 10%;
 padding-top: .5em;
 transition: all 0.5s linear;
+opacity: 0.9;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 2em;
 `
 // transform: translateX(-100%); 
 // mi pana revísate transitions

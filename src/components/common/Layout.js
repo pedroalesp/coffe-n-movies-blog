@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Header } from '.'
+import { Header, DrawerMenu } from '.'
 import { Helmet } from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import { MenuProvider } from '../../context'
 import '../../styles/app.css'
-//import config from '../../utils/siteConfig'
 
 const DefaultLayout = ({ data, children, bodyClass}) => {
     const site = data.allGhostSettings.edges[0].node
@@ -17,11 +17,14 @@ const DefaultLayout = ({ data, children, bodyClass}) => {
                 <body className={bodyClass} />
             </Helmet>
 
-            <div className="viewport">
+            <MenuProvider>
+                <div className="viewport">
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     <Header site={site}/>
+                    <DrawerMenu site={site}/>
+
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
@@ -42,7 +45,7 @@ const DefaultLayout = ({ data, children, bodyClass}) => {
 
                 </div>
             </div>
-
+            </MenuProvider>
         </>
     )
 }
