@@ -9,11 +9,11 @@ import '../../styles/app.css'
 const Header = ({site}) => {
     const [match, setMatch] = useState(true)
     const matched = useReactSimpleMatchMedia('(max-width: 620px)')
-    const {actToggle} = useContext(MenuContext)
+    const {actToggle, toggle} = useContext(MenuContext)
 
     useEffect( () => {
         setMatch(matched)
-    }, [matched])
+    }, [matched, toggle])
 
     const handleToggle = () => {
         actToggle()
@@ -29,7 +29,7 @@ const Header = ({site}) => {
                 </div>
 
                   {match 
-                  ? ( <small  onClick={handleToggle}>
+                  ? ( <small className={` ${toggle ? 'drawer-buttonOff' : ''}`} onClick={handleToggle}>
                           <img src={menu} className='site-menu' alt='menu' />
                       </small> )
                   : ( <div className="site-mast-right">

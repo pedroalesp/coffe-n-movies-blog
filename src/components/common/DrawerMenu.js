@@ -5,11 +5,15 @@ import { MenuContext } from '../../context'
 
 const DrawerMenu = ({site}) => {
     const {toggle} = useContext(MenuContext)
-    console.log('toggle nav:' + toggle)
 
     return (
     <StyledNav menuToggle={toggle}>
-        <Navigation data={site.navigation} navClass="site-nav-item" />
+        <div className='close-menu-container'>
+            <span role='img' aria-label='emoji'>❌</span>
+        </div>
+        <div className='nav-container'>
+            <Navigation data={site.navigation} navClass="site-nav-item" />
+        </div>
     </StyledNav>
     )
 }

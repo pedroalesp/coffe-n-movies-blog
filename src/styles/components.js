@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNav = styled.div`
-border: 2px solid ${({menuToggle}) => menuToggle ? 'red;' : 'blue;'}
+transform: ${({menuToggle}) => menuToggle ? 'translateY(0%);' : 'translateY(-101%);'}
 width: 100vw;
 height: 100%;
 position: fixed;
