@@ -7,7 +7,6 @@ export const MenuProvider = ({children}) => {
 
     const actToggle = () => {
         setToggle(!toggle)
-        console.log('si sirvo', toggle)
     }
 
     return (
