@@ -5,7 +5,7 @@ transform: ${({menuToggle}) => menuToggle ? 'translateY(0%);' : 'translateY(-101
 width: 100vw;
 height: 100%;
 position: fixed;
-background-color: #001219;
+background-color: #111111;
 z-index: 3;
 padding-top: .5em;
 transition: all 0.5s linear;

@@ -23,7 +23,7 @@ what's here to work the way you'd like it to.
 
     /* Colours */
     --color-primary: #3eb0ef;
-    --color-base: #001219;
+    --color-base: #000;
     --color-secondary: #5B7A81;
     --color-border: #c7d5d8;
     --color-bg: #be1010;
@@ -553,7 +553,7 @@ h6 {
 }
 
 .content {
-    margin: 0 auto;
+    margin: 4em 0 auto;
     font-size: 2rem;
     line-height: 1.7em;
 }
@@ -573,7 +573,7 @@ h6 {
 .post-feature-image img {
     margin: 0 0 3vw;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     object-fit: cover;
 }
 
@@ -792,7 +792,7 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 7em 0 2em 0;
+    padding: 2em 0 2em 0;
 }
 
 /* Index
@@ -932,7 +932,7 @@ h6 {
 .author-header {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 4vw;
+    margin: 4em 0 4vw;
 }
 
 .author-header h1 {
