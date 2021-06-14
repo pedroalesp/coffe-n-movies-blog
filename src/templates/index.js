@@ -14,7 +14,7 @@ import { MetaData } from '../components/common/meta'
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
-    console.log(posts)
+
     return (
         <>
             
@@ -22,10 +22,12 @@ const Index = ({ data, location, pageContext }) => {
                 <Layout>
                     <div className="container">
                         <section className="post-feed">
-                            {posts.map(({ node, index }) => (
+                            {posts.map(({ node }) => {               
+                              return (
                                 // The tag below includes the markup for each post - components/common/PostCard.js
-                                <PostCard key={node.id} post={node} portrait={index === 0}/>
-                                ))}
+                                <PostCard key={node.id} post={node}/>
+                                )})}
+
                         </section>
                         <Pagination pageContext={pageContext} />
                     </div>
