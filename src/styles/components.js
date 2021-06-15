@@ -26,18 +26,6 @@ export const StyledHeader = styled.div`{
     flex-direction: column;
 }`
 
-// export const StyledHidenLogo = styled.div`{
-//     border: ${({visible}) => visible ? '2px solid red;' : '2px solid blue;' }
-//     margin-top: .5rem;
-//     z-index: 2;
-// }`
-
-// export const StyledHidenNav = styled.div`{
-//     display: flex;
-// }`
-// // transform: translate(0, 10vh);
-// // transition: all 0.5s;
-
 export const StyledError = styled.section`
 display: flex;
 img {
@@ -70,4 +58,9 @@ a {
     }
     font-size: 1.5em;
 }
+`
+
+export const StyledImage = styled.div`
+width: auto;
+height: 100%;
 `

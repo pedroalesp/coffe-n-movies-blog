@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import { StyledImage } from '../../styles/components'
 
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
@@ -10,12 +11,11 @@ const PostCard = ({ post }) => {
 
     return (
         <article className={`post-card `}>
-
-            <Link to={url} className="post-card-image-link">
-                    <img src={post.feature_image} className="post-card-image" alt='Feature Image' />
-            </Link>
-           
-                
+                <StyledImage>
+                    <Link to={url} className="post-card-image-link">
+                        <img src={post.feature_image} className="post-card-image" alt='Feature Image' />
+                    </Link>
+                </StyledImage>
             <div className='post-card-content'>
                 <Link to={url} className="post-card-content-link">
                     <header className="post-card-header">
@@ -33,10 +33,11 @@ const PostCard = ({ post }) => {
                                 <img className="default-avatar" src="/images/icons/avatar.svg" alt={post.primary_author.name}/>
                             }
                         </div>
-                        <span>{ post.primary_author.name }</span>
-                    </div>
-                    <div className="post-card-footer-right">
-                        <div>{readingTime}</div>
+                        <span>{ post.primary_author.name }
+                            <div className="post-card-footer-details">
+                                <p>{post.published_at_pretty} - {readingTime}</p>
+                            </div>
+                        </span>
                     </div>
                 </footer>
             </div>
