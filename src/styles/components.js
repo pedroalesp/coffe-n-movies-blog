@@ -64,3 +64,58 @@ export const StyledImage = styled.div`
 width: auto;
 height: 100%;
 `
+
+export const StyledPortrait = styled.section`
+margin: 6em 0 0 0;
+border-bottom: 1px solid #e9eef1;
+display: flex;
+padding: 0 10px 30px;
+
+@media  (max-width: 768px) {
+    flex-direction: column;
+}
+`
+export const StyledImagePortrait = styled.div`
+width: 67%;
+a {
+    img {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    width: 100%;
+    a {
+        img {
+            height: 200px;
+        }
+    }
+}
+`
+export const StyledContent = styled.div`
+margin-left: 30px;
+justify-content: center;
+display: flex;
+flex-direction: column;
+a {
+    header {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+    section {
+        2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    margin-left: 0;
+    a {
+        header {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+`

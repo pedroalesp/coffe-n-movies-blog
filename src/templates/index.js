@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Layout, PostCard, Pagination } from '../components/common'
+import { Layout, PostCard, Pagination, PortraitCard } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -14,19 +14,24 @@ import { MetaData } from '../components/common/meta'
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
-
+    console.log(posts[0].node.id)
     return (
         <>
             
             <MetaData location={location} />
                 <Layout>
                     <div className="container">
+
+                      <PortraitCard key={posts[0].node.id} post={posts[0].node}/>
+
                         <section className="post-feed">
-                            {posts.map(({ node }) => {               
-                              return (
-                                // The tag below includes the markup for each post - components/common/PostCard.js
-                                <PostCard key={node.id} post={node}/>
-                                )})}
+                            {
+                              
+                                  posts.map(({ node }) => {               
+                                    return (
+                                      // The tag below includes the markup for each post - components/common/PostCard.js
+                                      <PostCard key={node.id} post={node}/>
+                                      )})}
 
                         </section>
                         <Pagination pageContext={pageContext} />
