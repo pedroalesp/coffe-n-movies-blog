@@ -28,6 +28,7 @@ export const StyledHeader = styled.div`{
 
 export const StyledError = styled.section`
 display: flex;
+margin-top: 5em;
 img {
     width: 55%
 }

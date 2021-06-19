@@ -23,7 +23,7 @@ const Index = ({ data, location, pageContext }) => {
                       <PortraitCard key={posts[0].node.id} post={posts[0].node}/>
                         <section className="post-feed">
                           {
-                             <PostFeed post={posts} /> 
+                            posts.length > 1 ? <PostFeed post={posts} /> : null
                           }
                         </section>
                         <Pagination pageContext={pageContext} />
